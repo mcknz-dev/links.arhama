@@ -1,0 +1,160 @@
+
+
+/* --- Global Styles --- */
+body {
+    text-align: center;
+    background-color: #F9CDE6;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: "Cocogoose", sans-serif;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* --- Container --- */
+.container {
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+}
+
+/* --- Icon --- */
+.icon {
+    width: 50%;
+    border-radius: 50%;
+    padding: 4%;
+}
+
+.logo{
+
+    width: 700px;
+}
+
+h1{
+    font-family: "Delius Swash Caps";
+    font-size: 100px;
+}
+
+/* --- TILES MOBILE-FIRST --- */
+.tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.tiles > a,
+.tiles > .tile1, .tiles > .tile2, .tiles > .tile3,
+.tiles > .tile4, .tiles > .tile5, .tiles > .tile6 {
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 50px;
+    width: 86vw;
+    max-width: 100%;
+    min-height: 70px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding: 45px 0;
+}
+
+/* --- Tile Colors --- */
+.tile1 { background: #F2B6D5; box-shadow: 0 15px #D48CAC; }
+.tile2 { background: #EFABCC; box-shadow: 0 15px #D07B9F; }
+.tile3 { background: #EC9FC3; box-shadow: 0 15px #CC6A92; }
+.tile4 { background: #E994BA; box-shadow: 0 15px #C85985; }
+.tile5 { background: #E688B1; box-shadow: 0 15px #C44878; }
+.tile6 { background: #E37DA8; box-shadow: 0 15px #C0376B; }
+
+.contact { font-size: 43px; margin-top: 40px; }
+.contact a{ text-decoration: underline; }
+.rights { font-size: 25px; margin-bottom: 0px; margin-top: 60px;}
+.footnote { margin-top: 1px; font-size: 25px; }
+.footnote a { font-family: "orbitron", sans-serif;letter-spacing: 2px; font-weight: bold }
+
+/* --- Replace the previous code at the bottom of style.css with this --- */
+
+/* 1. Set up the container (the link itself) */
+.tiles div a {
+    display: flex;             /* Use flexbox to align things */
+    justify-content: center;   /* This will now CENTER the text horizontally */
+    align-items: center;       /* Center the text vertically */
+    position: relative;        /* This is important! It makes the link the reference point for the icon. */
+    font-size: 60px;           /* Keep your larger font size */
+    width: 100%;               /* Make sure the link fills the entire tile */
+    height: 100%;              /* Make sure it fills the height too */
+}
+
+/* 2. Position the icon absolutely */
+.tiles div a i {
+    position: absolute;        /* Take the icon out of the normal flow */
+    left: 40px;                /* Pin it 40px from the left edge. Adjust this number if you want! */
+    top: 50%;                  /* Move it to the vertical middle... */
+    transform: translateY(-50%); /* ...and shift it up slightly to be perfectly centered. */
+}
+
+@media (min-width: 1000px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .logo {
+        width: 350px;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+    .icon {
+        width: 150px;
+        padding: 10px 0 0 0;
+    }
+    .container { width: 60%; margin: 0 auto; padding: 48px; }
+    .social-icons { font-size: 70px; gap: 65px; }
+    .tiles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 32px;
+        width: 150vw;
+        max-width: 900px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .tiles > a,
+    .tiles > .tile1, .tiles > .tile2, .tiles > .tile3,
+    .tiles > .tile4, .tiles > .tile5, .tiles > .tile6 {
+        font-size: 15px !important;
+        width: 280px;
+        height: 80px;
+        min-height: 50px;
+        border-radius: 999px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        box-shadow: 6px 1px 6px #ECC8C6;
+        transition: box-shadow 0.14s;
+        padding: 0 10px;
+    }
+    .contact {
+        font-size: 30px;
+        margin-top: 40px;
+    }
+    .rights, .footnote {
+        font-size: 15px;
+        margin: 0;
+    }
+}
