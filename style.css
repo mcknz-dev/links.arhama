@@ -3,7 +3,7 @@
 /* --- Global Styles --- */
 body {
     text-align: center;
-    background: linear-gradient(180deg, #F9CDE6 0%, #da609c 100%);
+    background: rgba(249, 228, 231, 0.7);
     justify-content: center;
     display: flex;
     align-items: center;
@@ -27,20 +27,25 @@ a {
 
 /* --- Icon --- */
 .icon {
-    margin-top: 100px;
-    width: 50%;
-    border-radius: 50%;
-    border: 10px solid #7C2D4D;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 85%;
+    border-radius: 10%;
+    border: 10px solid #C48A98;
 }
 
 .logo{
 
-    width: 700px;
+    width: 800px;
 }
 
 h1{
-    font-family: "Delius Swash Caps";
-    font-size: 100px;
+    font-family: "Ballet";
+    font-size: 220px;
+    margin-top: 10px;
+    margin-bottom: -100px;
+    color: #C48A98;
+    letter-spacing: -5px;
 }
 
 /* --- TILES MOBILE-FIRST --- */
@@ -69,12 +74,13 @@ h1{
 }
 
 /* --- Tile Colors --- */
-.tile1 { background: #D48CAC; box-shadow: 0 15px #8C5A71; }
-.tile2 { background: #D07B9F; box-shadow: 0 15px #885068; }
-.tile3 { background: #CC6A92; box-shadow: 0 15px #84445F; }
-.tile4 { background: #C85985; box-shadow: 0 15px #803856; }
-.tile5 { background: #C44878; box-shadow: 0 15px #7C2D4D; }
-.tile6 { background: #C0376B; box-shadow: 0 15px #782244; }
+/* --- Tile Colors (Arhama Dusty Rose Theme) --- */
+.tile1 { background: linear-gradient(to bottom, #E6BCCD, #DFA8BB); box-shadow: 0 15px #B87D92; }
+.tile2 { background: linear-gradient(to bottom, #E6BCCD, #DFA8BB); box-shadow: 0 15px #B87D92; }
+.tile3 { background: linear-gradient(to bottom, #E6BCCD, #DFA8BB); box-shadow: 0 15px #B87D92; }
+.tile4 { background: linear-gradient(to bottom, #E6BCCD, #DFA8BB); box-shadow: 0 15px #B87D92; }
+.tile5 { background: linear-gradient(to bottom, #E6BCCD, #DFA8BB); box-shadow: 0 15px #B87D92; }
+.tile6 { background: linear-gradient(to bottom, #E6BCCD, #DFA8BB); box-shadow: 0 15px #B87D92; }
 
 .contact { font-size: 43px; margin-top: 40px; }
 .contact a{ text-decoration: underline; }
@@ -106,6 +112,9 @@ h1{
     margin-bottom: 30px;
     margin-top: 10px;
 }
+.social-icons a {
+    color: #C48A98;
+}
 
 /* 2. Position the icon absolutely */
 .tiles div a i {
@@ -113,6 +122,10 @@ h1{
     left: 40px;                /* Pin it 40px from the left edge. Adjust this number if you want! */
     top: 50%;                  /* Move it to the vertical middle... */
     transform: translateY(-50%); /* ...and shift it up slightly to be perfectly centered. */
+}
+
+.footnote a{
+    color: #272727;
 }
 
 @media (min-width: 1000px) {
